@@ -15,7 +15,22 @@
       content="A non-custodial MCP decision layer for AI agents allocating stablecoin capital in DeFi."
     />
     <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://daltieri86.github.io/DAORoute-landing/"
+    />
+    <meta
+      property="og:image"
+      content="https://daltieri86.github.io/DAORoute-landing/og-image.svg"
+    />
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://daltieri86.github.io/DAORoute-landing/og-image.svg"
+    />
     <meta name="theme-color" content="#0f2742" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -54,7 +69,7 @@
           </div>
           <p class="microcopy">
             No custody. No guaranteed returns. No automated transaction
-            broadcasting.
+            broadcasting. Pilot access is reviewed manually for fit.
           </p>
         </div>
 
@@ -270,42 +285,64 @@
           <p class="eyebrow">Example response shape</p>
           <h2>Designed for agents, readable by humans.</h2>
           <p>
-            The real response is structured JSON. This shortened example shows
-            the type of decision evidence a client can expect during the pilot.
-            A redacted machine-readable sample is also available as
+            The real response is structured JSON. This preview shows how
+            DaoRoute packages allocation, evidence, risk controls, execution
+            metadata, and verification into one agent-readable response. A
+            richer redacted sample is also available as
             <a class="inline-link" href="sample-output.json">sample-output.json</a>.
           </p>
         </div>
         <pre class="code-block" aria-label="Sample DaoRoute MCP output"><code>{
+  "request_id": "req_redacted_7f3a",
+  "data_age_seconds": 9,
+  "chain_scope": ["ethereum", "arbitrum", "base"],
   "recommended_action": "PROCEED",
   "risk_profile": "conservative",
   "asset": "USDC",
+  "portfolio_expected_apy": 0.0592,
   "portfolio_expected_apy_net_of_fee": 0.0584,
   "fee_bps": 8,
+  "diversification_score": 86.5,
   "allocations": [
     {
       "protocol": "aave",
       "chain": "ethereum",
       "amount_pct": 0.15,
+      "risk_adjusted_score": 2.41,
       "security_status": "clear",
       "forecast": {
-        "predicted_apr_30d": 6.2,
+        "predicted_apr_30d": 0.062,
         "confidence": 0.78
+      },
+      "evidence": {
+        "apr_volatility_30d": 0.009,
+        "history_days_available": 365,
+        "why_selected": [
+          "passes protocol safety floor",
+          "security status is clear",
+          "above baseline after transparent fee"
+        ]
       }
     }
   ],
-  "data_product": {
+  "evidence_snapshot": {
     "product_type": "aggregated_decision_evidence",
+    "candidate_pools_screened": 82,
+    "apy_history_rows_indexed": 43817,
     "raw_database_export_available": false,
     "evidence_grade": "usable_for_controlled_pilots"
   },
   "execution": {
     "non_custodial": true,
     "broadcast": false,
-    "calldata_available": true
+    "calldata_available": true,
+    "aggregator": "1inch",
+    "client_must_review_and_sign": true
   },
   "attestation": {
+    "signed_by": "daoroute",
     "algo": "ed25519",
+    "payload_hash": "sha256:redacted",
     "valid_until": "short-lived timestamp"
   }
 }</code></pre>
@@ -358,8 +395,9 @@
               Request free pilot access
             </a>
             <p>
-              Prefer a form? Replace this email link with your Google Form or
-              Tally URL when ready.
+              Send your use case, agent stack, and testing timeline. We review
+              pilot requests manually and reply with next steps when there is a
+              fit.
             </p>
           </div>
         </div>
@@ -377,6 +415,13 @@
           transactions, guarantee returns, or provide investment advice. Pilot
           output is informational and experimental.
         </p>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="https://github.com/DAltieri86/DAORoute-landing">GitHub</a>
+          <a href="sample-output.json">Sample output</a>
+          <a href="mailto:softwaretamrsv@gmail.com?subject=DaoRoute%20Pilot%20Access%20Request">
+            Request access
+          </a>
+        </nav>
       </div>
     </footer>
   </body>

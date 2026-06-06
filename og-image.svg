@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">DaoRoute</title>
+  <desc id="desc">Non-custodial MCP decision layer for DeFi agents.</desc>
+  <rect width="1200" height="630" fill="#f7f9fc"/>
+  <rect x="72" y="72" width="1056" height="486" rx="28" fill="#ffffff" stroke="#d9e2ec" stroke-width="2"/>
+  <rect x="108" y="108" width="80" height="80" rx="18" fill="#0f2742"/>
+  <text x="148" y="158" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800" fill="#ffffff">DR</text>
+  <text x="108" y="260" font-family="Inter, Arial, sans-serif" font-size="92" font-weight="800" fill="#0b1b2e">DaoRoute</text>
+  <text x="112" y="324" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600" fill="#304358">Non-custodial MCP decision layer</text>
+  <text x="112" y="370" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="600" fill="#304358">for DeFi agents allocating stablecoin capital.</text>
+  <g transform="translate(112 438)">
+    <rect width="226" height="52" rx="12" fill="#e7f0ff"/>
+    <text x="113" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#2f73d8">MCP-native</text>
+  </g>
+  <g transform="translate(360 438)">
+    <rect width="252" height="52" rx="12" fill="#eef3f8"/>
+    <text x="126" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f2742">Evidence-backed</text>
+  </g>
+  <g transform="translate(636 438)">
+    <rect width="218" height="52" rx="12" fill="#e9f7f1"/>
+    <circle cx="35" cy="26" r="8" fill="#14a46c"/>
+    <text x="122" y="34" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0f2742">Safety-first</text>
+  </g>
+  <text x="112" y="530" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500" fill="#5d6b7d">Controlled pilot. No custody. No guaranteed returns. No investment advice.</text>
+</svg>

@@ -17,9 +17,9 @@ The page is intentionally simple:
 index.html              Main landing page
 styles.css              Responsive styling
 sample-output.json      Redacted example MCP response
+og-image.svg            Social preview image for link sharing
 404.html                GitHub Pages fallback page
-.github/workflows/pages.yml
-                        GitHub Pages deployment workflow
+.nojekyll               Disables Jekyll processing for static assets
 ```
 
 ## Local Preview
@@ -53,12 +53,18 @@ http://localhost:8080
 3. Under `Build and deployment`, set:
 
    ```text
-   Source: GitHub Actions
+   Source: Deploy from a branch
+   Branch: main
+   Folder: / (root)
    ```
 
 4. Push to `main`.
 
-5. Wait for the `Deploy DaoRoute landing to GitHub Pages` workflow to complete.
+5. Wait for the native `pages build and deployment` check to complete.
+
+No custom GitHub Actions workflow is required for this repository. Keeping the
+deployment branch-based avoids duplicate Pages deploy jobs and misleading failed
+checks.
 
 The site URL will look like:
 
@@ -74,8 +80,9 @@ The current CTA uses email:
 softwaretamrsv@gmail.com
 ```
 
-When a Google Form, Tally form, or CRM form is ready, replace the `mailto:` URL
-in `index.html` with the form URL.
+Pilot requests are intentionally handled by email while access is manually
+reviewed. If a form or CRM is added later, replace the `mailto:` URL in
+`index.html` with that public URL.
 
 ## Marketing Boundaries
 

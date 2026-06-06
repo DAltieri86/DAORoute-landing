@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DaoRoute | Non-custodial MCP decision layer for DeFi agents</title>
+    <meta
+      name="description"
+      content="DaoRoute is a non-custodial MCP server for AI agents and DeFi bots. Controlled pilot for stablecoin allocation decisions with risk scoring, security gates, signed attestations, and execution metadata."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="DaoRoute" />
+    <meta
+      property="og:description"
+      content="A non-custodial MCP decision layer for AI agents allocating stablecoin capital in DeFi."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0f2742" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="DaoRoute home">
+        <span class="brand-mark" aria-hidden="true">DR</span>
+        <span>DaoRoute</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#what-it-is">What it is</a>
+        <a href="#pilot">Pilot</a>
+        <a href="#sample-output">Sample output</a>
+        <a class="nav-cta" href="#request-access">Request access</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Controlled pilot now open</p>
+          <h1>DaoRoute</h1>
+          <p class="hero-subtitle">
+            DaoRoute is a non-custodial MCP server for AI agents and DeFi bots.
+            It helps decide where to allocate stablecoin capital with risk
+            scoring, live security gates, aggregate data evidence, signed
+            attestations, and execution metadata.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="#request-access">
+              Request free pilot access
+            </a>
+            <a class="button button-secondary" href="#sample-output">
+              See sample output
+            </a>
+          </div>
+          <p class="microcopy">
+            No custody. No guaranteed returns. No automated transaction
+            broadcasting.
+          </p>
+        </div>
+
+        <aside class="decision-card" aria-label="DaoRoute decision preview">
+          <div class="status-row">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Security status: clear</span>
+          </div>
+          <dl class="metrics-grid">
+            <div>
+              <dt>Action</dt>
+              <dd>PROCEED</dd>
+            </div>
+            <div>
+              <dt>Mode</dt>
+              <dd>Non-custodial</dd>
+            </div>
+            <div>
+              <dt>Asset</dt>
+              <dd>Stablecoins</dd>
+            </div>
+            <div>
+              <dt>Proof</dt>
+              <dd>Ed25519</dd>
+            </div>
+          </dl>
+          <p>
+            One response packages allocation rationale, risk boundaries,
+            security status, data coverage, and unsigned execution metadata for
+            agent workflows.
+          </p>
+        </aside>
+      </section>
+
+      <section class="section section-tight" aria-labelledby="trust-title">
+        <div class="trust-bar">
+          <div>
+            <strong>MCP-native</strong>
+            <span>Built for agent calls, not dashboards.</span>
+          </div>
+          <div>
+            <strong>Evidence-backed</strong>
+            <span>Aggregated data coverage included in the response.</span>
+          </div>
+          <div>
+            <strong>Safety-first</strong>
+            <span>Security overrides take precedence over yield signals.</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="what-it-is" class="section split">
+        <div>
+          <p class="eyebrow">Product boundary</p>
+          <h2>What it is</h2>
+          <p>
+            DaoRoute is designed as a decision layer between autonomous agents
+            and DeFi execution routes. It does not replace wallets,
+            aggregators, or protocol-specific deposit adapters.
+          </p>
+        </div>
+        <div class="cards three">
+          <article class="card">
+            <h3>MCP server</h3>
+            <p>
+              Exposes structured tools that AI agents can call from compatible
+              MCP clients and agent frameworks.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Non-custodial</h3>
+            <p>
+              Returns decisions and unsigned execution metadata. Users keep
+              wallet control and decide whether to sign.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Stablecoin allocation layer</h3>
+            <p>
+              Focuses the first pilot on stablecoin capital, conservative pool
+              selection, and explainable risk controls.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split reverse" aria-labelledby="not-title">
+        <div>
+          <p class="eyebrow">Clear limits</p>
+          <h2 id="not-title">What it is not</h2>
+          <p>
+            The pilot is intentionally narrow. That makes feedback cleaner and
+            keeps the product honest while the public track record matures.
+          </p>
+        </div>
+        <div class="cards three">
+          <article class="card card-muted">
+            <h3>Not a prediction tool</h3>
+            <p>
+              DaoRoute is not marketed as a governance prediction engine or a
+              trading signal service.
+            </p>
+          </article>
+          <article class="card card-muted">
+            <h3>No yield promises</h3>
+            <p>
+              The output can estimate, compare, and explain. It never guarantees
+              profit, APY, or capital preservation.
+            </p>
+          </article>
+          <article class="card card-muted">
+            <h3>Not custody</h3>
+            <p>
+              DaoRoute never takes possession of funds, never signs
+              transactions, and never broadcasts on behalf of users.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="why-title">
+        <div class="section-heading">
+          <p class="eyebrow">Why agents need this</p>
+          <h2 id="why-title">Aggregators route swaps. DaoRoute packages the decision.</h2>
+          <p>
+            Most DeFi infrastructure answers how to execute after a destination
+            is already chosen. DaoRoute focuses on the prior step: whether a
+            route is worth considering, what risks are visible, and what
+            evidence supports the decision.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature">
+            <span class="feature-number">01</span>
+            <h3>Risk-adjusted allocation</h3>
+            <p>
+              Pool selection considers yield, risk score, diversification,
+              volatility, security state, and configured capital limits.
+            </p>
+          </div>
+          <div class="feature">
+            <span class="feature-number">02</span>
+            <h3>Live security gate</h3>
+            <p>
+              Security status overrides predictive output. A compromised
+              protocol should never be treated as a yield opportunity.
+            </p>
+          </div>
+          <div class="feature">
+            <span class="feature-number">03</span>
+            <h3>Aggregate evidence layer</h3>
+            <p>
+              The response includes data coverage and validation context without
+              exposing raw wallet-level records or copyable database dumps.
+            </p>
+          </div>
+          <div class="feature">
+            <span class="feature-number">04</span>
+            <h3>Signed output</h3>
+            <p>
+              Decisions can include a short-lived Ed25519 attestation so clients
+              can verify what the engine said at a specific time.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pilot" class="section split">
+        <div>
+          <p class="eyebrow">Pilot flow</p>
+          <h2>How the pilot works</h2>
+          <p>
+            The first pilot is free for selected users and focused on practical
+            integration feedback, not public performance claims.
+          </p>
+        </div>
+        <ol class="steps">
+          <li>
+            <span>1</span>
+            <div>
+              <h3>Request access</h3>
+              <p>
+                Tell us who you are, which agent stack you use, and what
+                stablecoin allocation workflow you want to test.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span>2</span>
+            <div>
+              <h3>Receive a pilot API key</h3>
+              <p>
+                Approved pilot users receive an MCP URL, API key, quickstart,
+                and sample request.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span>3</span>
+            <div>
+              <h3>Integrate and validate</h3>
+              <p>
+                Call the tools, inspect the response, validate useful paths, and
+                share feedback before any paid plan is introduced.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="sample-output" class="section sample-section">
+        <div class="section-heading">
+          <p class="eyebrow">Example response shape</p>
+          <h2>Designed for agents, readable by humans.</h2>
+          <p>
+            The real response is structured JSON. This shortened example shows
+            the type of decision evidence a client can expect during the pilot.
+            A redacted machine-readable sample is also available as
+            <a class="inline-link" href="sample-output.json">sample-output.json</a>.
+          </p>
+        </div>
+        <pre class="code-block" aria-label="Sample DaoRoute MCP output"><code>{
+  "recommended_action": "PROCEED",
+  "risk_profile": "conservative",
+  "asset": "USDC",
+  "portfolio_expected_apy_net_of_fee": 0.0584,
+  "fee_bps": 8,
+  "allocations": [
+    {
+      "protocol": "aave",
+      "chain": "ethereum",
+      "amount_pct": 0.15,
+      "security_status": "clear",
+      "forecast": {
+        "predicted_apr_30d": 6.2,
+        "confidence": 0.78
+      }
+    }
+  ],
+  "data_product": {
+    "product_type": "aggregated_decision_evidence",
+    "raw_database_export_available": false,
+    "evidence_grade": "usable_for_controlled_pilots"
+  },
+  "execution": {
+    "non_custodial": true,
+    "broadcast": false,
+    "calldata_available": true
+  },
+  "attestation": {
+    "algo": "ed25519",
+    "valid_until": "short-lived timestamp"
+  }
+}</code></pre>
+      </section>
+
+      <section class="section" aria-labelledby="tools-title">
+        <div class="section-heading">
+          <p class="eyebrow">Pilot tools</p>
+          <h2 id="tools-title">Two MCP tools, narrow by design.</h2>
+        </div>
+        <div class="cards two">
+          <article class="card">
+            <h3><code>get_optimal_allocation</code></h3>
+            <p>
+              Returns a stablecoin allocation decision with risk diagnostics,
+              data evidence, execution metadata, and optional signed attestation.
+            </p>
+          </article>
+          <article class="card">
+            <h3><code>get_protocol_security_status</code></h3>
+            <p>
+              Returns security state, recommended action, active alerts, and
+              whether the engine would reduce exposure or exit immediately.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="request-access" class="section request-section">
+        <div class="request-panel">
+          <div>
+            <p class="eyebrow">Free controlled pilot</p>
+            <h2>Request pilot access</h2>
+            <p>
+              Pilot access is free for 30 days for selected builders and teams.
+              We are looking for practical feedback from AI-agent, DeFi, wallet,
+              DAO treasury, and automation builders.
+            </p>
+            <ul class="check-list">
+              <li>API key issued manually after review.</li>
+              <li>No funds are custodied by DaoRoute.</li>
+              <li>No investment advice or guaranteed returns.</li>
+            </ul>
+          </div>
+          <div class="request-actions">
+            <a
+              class="button button-primary"
+              href="mailto:softwaretamrsv@gmail.com?subject=DaoRoute%20Pilot%20Access%20Request&body=Hi%20DaoRoute%20team%2C%0A%0AI%20would%20like%20to%20request%20pilot%20access%20to%20DaoRoute.%0A%0AName%3A%0ACompany%20or%20project%3A%0AUse%20case%3A%0AMCP%20client%20or%20agent%20framework%3A%0AExpected%20testing%20timeline%3A%0A%0AI%20understand%20DaoRoute%20is%20non-custodial%2C%20does%20not%20guarantee%20returns%2C%20and%20does%20not%20provide%20investment%20advice.%0A"
+            >
+              Request free pilot access
+            </a>
+            <p>
+              Prefer a form? Replace this email link with your Google Form or
+              Tally URL when ready.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>DaoRoute</strong>
+        <p>Non-custodial MCP decision layer for DeFi agents.</p>
+      </div>
+      <div class="footer-disclaimer">
+        <p>
+          DaoRoute does not custody funds, sign transactions, broadcast
+          transactions, guarantee returns, or provide investment advice. Pilot
+          output is informational and experimental.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

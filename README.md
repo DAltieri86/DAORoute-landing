@@ -1,0 +1,100 @@
+# DaoRoute Landing Page
+
+Public landing page for DaoRoute, a non-custodial MCP decision layer for AI
+agents and DeFi bots.
+
+The page is intentionally simple:
+
+- static HTML and CSS only;
+- no build step;
+- no secrets;
+- ready for GitHub Pages;
+- positioned as a controlled pilot, not a public performance launch.
+
+## Files
+
+```text
+index.html              Main landing page
+styles.css              Responsive styling
+sample-output.json      Redacted example MCP response
+404.html                GitHub Pages fallback page
+.github/workflows/pages.yml
+                        GitHub Pages deployment workflow
+```
+
+## Local Preview
+
+Open `index.html` directly in a browser, or run a local static server:
+
+```bash
+python3 -m http.server 8080
+```
+
+Then open:
+
+```text
+http://localhost:8080
+```
+
+## GitHub Pages Setup
+
+1. Open the repository on GitHub:
+
+   ```text
+   https://github.com/DAltieri86/DAORoute-landing
+   ```
+
+2. Go to:
+
+   ```text
+   Settings -> Pages
+   ```
+
+3. Under `Build and deployment`, set:
+
+   ```text
+   Source: GitHub Actions
+   ```
+
+4. Push to `main`.
+
+5. Wait for the `Deploy DaoRoute landing to GitHub Pages` workflow to complete.
+
+The site URL will look like:
+
+```text
+https://daltieri86.github.io/DAORoute-landing/
+```
+
+## Pilot Access CTA
+
+The current CTA uses email:
+
+```text
+softwaretamrsv@gmail.com
+```
+
+When a Google Form, Tally form, or CRM form is ready, replace the `mailto:` URL
+in `index.html` with the form URL.
+
+## Marketing Boundaries
+
+The public copy must stay honest:
+
+- controlled pilot, not full public launch;
+- no guaranteed returns;
+- no investment advice;
+- no custody;
+- no transaction signing or broadcasting by DaoRoute;
+- no raw database dump access;
+- not marketed as a governance prediction or trading signal tool.
+
+## Recommended Next Public Assets
+
+After the landing page is live, prepare:
+
+1. a short sample MCP response JSON;
+2. a one-page quickstart for pilot users;
+3. a request access form;
+4. a small public MCP adapter repository if you want directory listings without
+   exposing the private engine.

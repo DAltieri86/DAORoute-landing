@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "recommended_action": "PROCEED",
+  "risk_profile": "conservative",
+  "asset": "USDC",
+  "portfolio_expected_apy_net_of_fee": 0.0584,
+  "fee_bps": 8,
+  "summary": "Conservative stablecoin allocation candidate with live security status clear, aggregate evidence attached, and non-custodial execution metadata available.",
+  "allocations": [
+    {
+      "protocol": "aave",
+      "chain": "ethereum",
+      "amount_pct": 0.15,
+      "amount_usd": 15000,
+      "security_status": "clear",
+      "forecast": {
+        "predicted_apr_30d": 6.2,
+        "confidence": 0.78,
+        "risk_level": "low"
+      }
+    }
+  ],
+  "risk_breakdown": {
+    "overall_risk_level": "low",
+    "dominant_risk": "market_risk",
+    "security_override_active": false
+  },
+  "data_product": {
+    "product_type": "aggregated_decision_evidence",
+    "raw_database_export_available": false,
+    "client_access": "Authorized MCP/API clients receive aggregate evidence snapshots, not raw wallet-level dumps.",
+    "evidence_grade": "usable_for_controlled_pilots"
+  },
+  "execution": {
+    "non_custodial": true,
+    "broadcast": false,
+    "calldata_available": true
+  },
+  "attestation": {
+    "algo": "ed25519",
+    "valid_until": "short-lived timestamp"
+  },
+  "disclaimer": "Illustrative redacted sample. DaoRoute does not custody funds, guarantee returns, broadcast transactions, or provide investment advice."
+}

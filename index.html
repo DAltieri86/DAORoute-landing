@@ -6,13 +6,13 @@
     <title>DaoRoute | Non-custodial MCP decision layer for DeFi agents</title>
     <meta
       name="description"
-      content="DaoRoute is a non-custodial MCP server for AI agents and DeFi bots. Controlled pilot for stablecoin allocation decisions with risk scoring, security gates, signed attestations, and execution metadata."
+      content="DaoRoute is a non-custodial MCP server for AI agents and DeFi bots. Controlled pilot for stablecoin allocation decisions backed by a multi-source data index, risk scoring, security gates, signed attestations, and execution metadata."
     />
     <meta name="robots" content="index,follow" />
     <meta property="og:title" content="DaoRoute" />
     <meta
       property="og:description"
-      content="A non-custodial MCP decision layer for AI agents allocating stablecoin capital in DeFi."
+      content="A non-custodial MCP decision layer with multi-source data evidence for AI agents allocating stablecoin capital in DeFi."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -42,6 +42,7 @@
       </a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="#what-it-is">What it is</a>
+        <a href="#data-layer">Data layer</a>
         <a href="#pilot">Pilot</a>
         <a href="#sample-output">Sample output</a>
         <a class="nav-cta" href="#request-access">Request access</a>
@@ -56,7 +57,7 @@
           <p class="hero-subtitle">
             DaoRoute is a non-custodial MCP server for AI agents and DeFi bots.
             It helps decide where to allocate stablecoin capital with risk
-            scoring, live security gates, aggregate data evidence, signed
+            scoring, live security gates, a multi-source evidence index, signed
             attestations, and execution metadata.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
@@ -112,7 +113,7 @@
           </div>
           <div>
             <strong>Evidence-backed</strong>
-            <span>Aggregated data coverage included in the response.</span>
+            <span>Multi-source data coverage included in the response.</span>
           </div>
           <div>
             <strong>Safety-first</strong>
@@ -234,6 +235,65 @@
               can verify what the engine said at a specific time.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section id="data-layer" class="section data-section">
+        <div class="section-heading">
+          <p class="eyebrow">Data foundation</p>
+          <h2>Decision evidence built from normalized DeFi and governance data.</h2>
+          <p>
+            DaoRoute is not a thin wrapper around a single APY endpoint. The
+            pilot engine maintains an internal evidence index from multiple data
+            sources, normalizes it into comparable pool and protocol features,
+            and returns only the decision-grade signals an agent needs.
+          </p>
+        </div>
+
+        <div class="data-metrics" aria-label="Pilot data index snapshot">
+          <div>
+            <span>3.2M+</span>
+            <p>governance votes indexed</p>
+          </div>
+          <div>
+            <span>1,100+</span>
+            <p>proposals normalized</p>
+          </div>
+          <div>
+            <span>43k+</span>
+            <p>APY history rows</p>
+          </div>
+          <div>
+            <span>80+</span>
+            <p>pools screened</p>
+          </div>
+        </div>
+
+        <div class="data-grid">
+          <article class="data-panel">
+            <h3>Sources combined</h3>
+            <p>
+              Snapshot governance activity, DeFiLlama yield and TVL history,
+              protocol allowlists, safety thresholds, security status, and
+              execution adapter metadata are combined into one response shape.
+            </p>
+          </article>
+          <article class="data-panel">
+            <h3>Signals extracted</h3>
+            <p>
+              The engine packages data age, screened pool count, APR history,
+              volatility, TVL context, protocol status, risk score,
+              diversification, fee-adjusted APY, and selection rationale.
+            </p>
+          </article>
+          <article class="data-panel">
+            <h3>Commercial boundary</h3>
+            <p>
+              Pilot users receive aggregate evidence and explainable decision
+              context. Raw database exports, wallet-level dumps, and copyable
+              model internals are not part of the public surface.
+            </p>
+          </article>
         </div>
       </section>
 

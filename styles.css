@@ -392,6 +392,61 @@ h3 {
   font-weight: 800;
 }
 
+.data-section {
+  max-width: 1120px;
+}
+
+.data-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  margin-bottom: 18px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.data-metrics div {
+  min-height: 126px;
+  padding: 22px;
+  background: #ffffff;
+}
+
+.data-metrics span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary-strong);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 820;
+  line-height: 1;
+}
+
+.data-metrics p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 680;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.data-panel {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.data-panel p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .steps {
   display: grid;
   gap: 16px;
@@ -580,7 +635,8 @@ h3 {
   }
 
   .cards.three,
-  .feature-grid {
+  .feature-grid,
+  .data-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -612,6 +668,8 @@ h3 {
   .cards.three,
   .cards.two,
   .feature-grid,
+  .data-grid,
+  .data-metrics,
   .metrics-grid {
     grid-template-columns: 1fr;
   }

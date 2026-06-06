@@ -89,12 +89,28 @@ reviewed. If a form or CRM is added later, replace the `mailto:` URL in
 The public copy must stay honest:
 
 - controlled pilot, not full public launch;
+- multi-source evidence layer, not a raw database marketplace;
 - no guaranteed returns;
 - no investment advice;
 - no custody;
 - no transaction signing or broadcasting by DaoRoute;
 - no raw database dump access;
 - not marketed as a governance prediction or trading signal tool.
+
+## Data Positioning
+
+The data layer should be described as normalized decision evidence:
+
+- Snapshot governance activity and vote context;
+- DeFiLlama pool, APY, and TVL history;
+- protocol safety rules and thresholds;
+- security status and freshness metadata;
+- execution metadata for non-custodial routing.
+
+Avoid implying that pilot users receive private raw dumps, wallet-level records,
+or guaranteed predictive edge. The public value proposition is: DaoRoute
+compresses hard-to-assemble DeFi data into concise, verifiable, agent-readable
+allocation evidence.
 
 ## Recommended Next Public Assets
 

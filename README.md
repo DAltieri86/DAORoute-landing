@@ -9,6 +9,12 @@ Live site:
 https://daltieri86.github.io/DAORoute-landing/
 ```
 
+Public pilot documentation:
+
+```text
+https://github.com/DAltieri86/DAORoute-mcp
+```
+
 DaoRoute is currently positioned as a **controlled pilot**, not a public
 performance product. The landing page is designed to convert qualified builders
 into pilot access requests while keeping the product boundaries clear.
@@ -136,3 +142,7 @@ Use this landing page for marketing and conversion.
 Use the separate public MCP pilot repository for integration documentation,
 marketplace metadata, sample requests, and API key policy. The private engine
 remains closed.
+
+```text
+https://github.com/DAltieri86/DAORoute-mcp
+```

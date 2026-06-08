@@ -43,6 +43,7 @@
       <nav class="nav" aria-label="Primary navigation">
         <a href="#what-it-is">What it is</a>
         <a href="#data-layer">Data layer</a>
+        <a href="#api-usage">API usage</a>
         <a href="#pilot">Pilot</a>
         <a href="#sample-output">Sample output</a>
         <a class="nav-cta" href="#request-access">Request access</a>
@@ -338,6 +339,64 @@
             </div>
           </li>
         </ol>
+      </section>
+
+      <section id="api-usage" class="section integration-section">
+        <div class="section-heading">
+          <p class="eyebrow">Integration preview</p>
+          <h2>Simple enough to test, structured enough for autonomous agents.</h2>
+          <p>
+            Approved pilot users receive a Streamable HTTP MCP endpoint and an
+            API key. The key can be supplied through MCP request metadata,
+            `x-api-key`, or `Authorization: Bearer ...`, depending on the
+            client.
+          </p>
+        </div>
+
+        <div class="integration-grid">
+          <article class="integration-panel">
+            <h3>Tool 1: allocation decision</h3>
+            <p>
+              Ask DaoRoute for a stablecoin allocation candidate with risk
+              profile, capital limits, security gates, evidence, execution
+              metadata, and optional signed attestation.
+            </p>
+            <pre class="mini-code" aria-label="get_optimal_allocation example"><code>{
+  "tool": "get_optimal_allocation",
+  "arguments": {
+    "capital_amount": "100000",
+    "asset": "USDC",
+    "chain": "auto",
+    "risk_profile": "conservative",
+    "signer_address": "0xYourWallet",
+    "max_slippage_bps": 100,
+    "attestation_required": true
+  }
+}</code></pre>
+          </article>
+
+          <article class="integration-panel">
+            <h3>Tool 2: protocol security status</h3>
+            <p>
+              Query the live security layer before entering or increasing
+              exposure to a protocol. Security overrides always take precedence
+              over cached predictive signals.
+            </p>
+            <pre class="mini-code" aria-label="get_protocol_security_status example"><code>{
+  "tool": "get_protocol_security_status",
+  "arguments": {
+    "protocol": "aave"
+  }
+}</code></pre>
+          </article>
+        </div>
+
+        <div class="api-note">
+          <strong>What pilot users receive:</strong>
+          MCP endpoint, pilot API key, request examples, response interpretation
+          guide, safety boundary notes, and feedback channel. No private model,
+          raw database dump, or custody component is distributed.
+        </div>
       </section>
 
       <section id="sample-output" class="section sample-section">

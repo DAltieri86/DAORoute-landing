@@ -1,30 +1,73 @@
-# DaoRoute Landing Page
+# DaoRoute Landing
 
-Public landing page for DaoRoute, a non-custodial MCP decision layer for AI
-agents and DeFi bots.
+Public landing page for **DaoRoute**, a non-custodial MCP decision layer for AI
+agents and DeFi automation builders.
 
-The page is intentionally simple:
+Live site:
 
-- static HTML and CSS only;
-- no build step;
-- no secrets;
-- ready for GitHub Pages;
-- positioned as a controlled pilot, not a public performance launch.
+```text
+https://daltieri86.github.io/DAORoute-landing/
+```
+
+DaoRoute is currently positioned as a **controlled pilot**, not a public
+performance product. The landing page is designed to convert qualified builders
+into pilot access requests while keeping the product boundaries clear.
+
+## Positioning
+
+DaoRoute helps AI agents and DeFi bots evaluate stablecoin allocation routes
+through:
+
+- multi-source data evidence;
+- risk-adjusted pool and protocol context;
+- live security gates;
+- non-custodial execution metadata;
+- short-lived signed attestations;
+- agent-readable MCP responses.
+
+The public message is intentionally specific: DaoRoute packages decision
+evidence. It does not custody funds, sign transactions, broadcast transactions,
+or guarantee yields.
+
+## Repository Scope
+
+This repository contains only the public landing page and redacted sample
+materials.
+
+It does **not** contain:
+
+- model weights;
+- ingestion pipelines;
+- private databases;
+- production credentials;
+- backend source code;
+- trading or allocation engine internals.
 
 ## Files
 
 ```text
-index.html              Main landing page
-styles.css              Responsive styling
-sample-output.json      Redacted example MCP response
-og-image.svg            Social preview image for link sharing
-404.html                GitHub Pages fallback page
-.nojekyll               Disables Jekyll processing for static assets
+index.html          Main landing page
+styles.css          Responsive styling
+sample-output.json  Redacted example MCP response
+og-image.svg        Social preview image
+404.html            GitHub Pages fallback
+.nojekyll           Static GitHub Pages marker
 ```
+
+## Content Rules
+
+Keep the public copy disciplined:
+
+- say **controlled pilot**, not mass public launch;
+- say **decision evidence**, not guaranteed alpha;
+- say **non-custodial**, not automated fund management;
+- say **aggregate evidence**, not raw database access;
+- say **execution metadata**, not transaction execution;
+- avoid performance promises, APY guarantees, or investment advice.
 
 ## Local Preview
 
-Open `index.html` directly in a browser, or run a local static server:
+Open `index.html` directly in a browser, or run:
 
 ```bash
 python3 -m http.server 8080
@@ -36,64 +79,60 @@ Then open:
 http://localhost:8080
 ```
 
-## GitHub Pages Setup
+## GitHub Pages Deployment
 
-1. Open the repository on GitHub:
+This repository uses GitHub Pages branch deployment.
 
-   ```text
-   https://github.com/DAltieri86/DAORoute-landing
-   ```
-
-2. Go to:
-
-   ```text
-   Settings -> Pages
-   ```
-
-3. Under `Build and deployment`, set:
-
-   ```text
-   Source: Deploy from a branch
-   Branch: main
-   Folder: / (root)
-   ```
-
-4. Push to `main`.
-
-5. Wait for the native `pages build and deployment` check to complete.
-
-No custom GitHub Actions workflow is required for this repository. Keeping the
-deployment branch-based avoids duplicate Pages deploy jobs and misleading failed
-checks.
-
-The site URL will look like:
+Recommended settings:
 
 ```text
-https://daltieri86.github.io/DAORoute-landing/
+Settings -> Pages
+Source: Deploy from a branch
+Branch: main
+Folder: / (root)
 ```
 
-## Pilot Access CTA
+No custom GitHub Actions workflow is required. Avoid adding a duplicate Pages
+workflow unless the deployment model changes.
 
-The current CTA uses email:
+## Pilot Access
+
+Pilot requests currently go to:
 
 ```text
 softwaretamrsv@gmail.com
 ```
 
-Pilot requests are intentionally handled by email while access is manually
-reviewed. If a form or CRM is added later, replace the `mailto:` URL in
-`index.html` with that public URL.
+Requests are reviewed manually. Approved users receive the MCP endpoint, pilot
+API key, quickstart, example requests, and response interpretation guide.
 
-## Marketing Boundaries
+## Maintenance Checklist
 
-The public copy must stay honest:
+Before publishing changes:
 
-- controlled pilot, not full public launch;
-- multi-source evidence layer, not a raw database marketplace;
-- no guaranteed returns;
-- no investment advice;
-- no custody;
-- no transaction signing or broadcasting by DaoRoute;
-- no raw database dump access;
-- not marketed as a governance prediction or trading signal tool.
+```bash
+python3 -m json.tool sample-output.json
+python3 - <<'PY'
+from html.parser import HTMLParser
+from pathlib import Path
 
+class Parser(HTMLParser):
+    pass
+
+for name in ("index.html", "404.html"):
+    parser = Parser()
+    parser.feed(Path(name).read_text())
+    print(f"{name}: html parse ok")
+PY
+```
+
+Also verify that no private email, API key, model artifact, database dump, or
+backend path has been added accidentally.
+
+## Public Repositories
+
+Use this landing page for marketing and conversion.
+
+Use the separate public MCP pilot repository for integration documentation,
+marketplace metadata, sample requests, and API key policy. The private engine
+remains closed.

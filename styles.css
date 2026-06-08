@@ -351,6 +351,12 @@ h3 {
   border-radius: var(--radius);
 }
 
+.card h3 code {
+  overflow-wrap: anywhere;
+  white-space: normal;
+  word-break: break-word;
+}
+
 .card p {
   margin-bottom: 0;
   color: var(--muted);

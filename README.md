@@ -31,6 +31,13 @@ through:
 - short-lived signed attestations;
 - agent-readable MCP responses.
 
+The public pilot currently presents four tool categories:
+
+- `get_market_snapshot` for aggregate market/data coverage;
+- `get_pool_evidence` for one-pool evidence lookups;
+- `get_protocol_security_status` for live safety state;
+- `get_optimal_allocation` for the final allocation decision packet.
+
 The public message is intentionally specific: DaoRoute packages decision
 evidence. It does not custody funds, sign transactions, broadcast transactions,
 or guarantee yields.

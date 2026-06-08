@@ -356,7 +356,43 @@
 
         <div class="integration-grid">
           <article class="integration-panel">
-            <h3>Tool 1: allocation decision</h3>
+            <h3>Tool 1: market snapshot</h3>
+            <p>
+              Ask what DaoRoute currently sees: candidate pools, data coverage,
+              protocol and chain breakdowns, and the strongest evidence-backed
+              opportunities.
+            </p>
+            <pre class="mini-code" aria-label="get_market_snapshot example"><code>{
+  "tool": "get_market_snapshot",
+  "arguments": {
+    "asset": "USDC",
+    "chain": "auto",
+    "min_pool_tvl_usd": 20000000,
+    "max_pools": 10
+  }
+}</code></pre>
+          </article>
+
+          <article class="integration-panel">
+            <h3>Tool 2: pool evidence</h3>
+            <p>
+              Inspect a shortlisted pool before sizing capital. The response
+              includes APR history stats, TVL context, risk fields, and evidence
+              quality.
+            </p>
+            <pre class="mini-code" aria-label="get_pool_evidence example"><code>{
+  "tool": "get_pool_evidence",
+  "arguments": {
+    "protocol": "aave",
+    "chain": "ethereum",
+    "token_symbol": "USDC",
+    "history_days": 365
+  }
+}</code></pre>
+          </article>
+
+          <article class="integration-panel">
+            <h3>Tool 3: allocation decision</h3>
             <p>
               Ask DaoRoute for a stablecoin allocation candidate with risk
               profile, capital limits, security gates, evidence, execution
@@ -377,7 +413,7 @@
           </article>
 
           <article class="integration-panel">
-            <h3>Tool 2: protocol security status</h3>
+            <h3>Tool 4: protocol security status</h3>
             <p>
               Query the live security layer before entering or increasing
               exposure to a protocol. Security overrides always take precedence
@@ -477,9 +513,23 @@
       <section class="section" aria-labelledby="tools-title">
         <div class="section-heading">
           <p class="eyebrow">Pilot tools</p>
-          <h2 id="tools-title">Two MCP tools, narrow by design.</h2>
+          <h2 id="tools-title">Four MCP tools, each with a clear job.</h2>
         </div>
-        <div class="cards two">
+        <div class="cards four">
+          <article class="card">
+            <h3><code>get_market_snapshot</code></h3>
+            <p>
+              Returns market coverage, top candidate pools, protocol/chain
+              breakdowns, evidence depth, and suggested next actions.
+            </p>
+          </article>
+          <article class="card">
+            <h3><code>get_pool_evidence</code></h3>
+            <p>
+              Returns one-pool evidence with APR history statistics, TVL
+              context, risk fields, and data quality signals.
+            </p>
+          </article>
           <article class="card">
             <h3><code>get_optimal_allocation</code></h3>
             <p>

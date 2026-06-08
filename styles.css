@@ -339,6 +339,10 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.cards.four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .card {
   min-height: 190px;
   padding: 24px;
@@ -695,6 +699,7 @@ h3 {
   }
 
   .cards.three,
+  .cards.four,
   .feature-grid,
   .data-grid,
   .integration-grid {
@@ -728,6 +733,7 @@ h3 {
   .trust-bar,
   .cards.three,
   .cards.two,
+  .cards.four,
   .feature-grid,
   .data-grid,
   .data-metrics,

@@ -17,11 +17,11 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://daltieri86.github.io/DAORoute-landing/"
+      content="https://www.daoroute.com/"
     />
     <meta
       property="og:image"
-      content="https://daltieri86.github.io/DAORoute-landing/og-image.svg"
+      content="https://www.daoroute.com/og-image.svg"
     />
     <meta property="og:image:type" content="image/svg+xml" />
     <meta property="og:image:width" content="1200" />
@@ -29,10 +29,12 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:image"
-      content="https://daltieri86.github.io/DAORoute-landing/og-image.svg"
+      content="https://www.daoroute.com/og-image.svg"
     />
     <meta name="theme-color" content="#0f2742" />
+    <link rel="canonical" href="https://www.daoroute.com/" />
     <link rel="stylesheet" href="styles.css" />
+    <script src="pilot-form.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -545,7 +547,7 @@
 
       <section id="request-access" class="section request-section">
         <div class="request-panel">
-          <div>
+          <div class="request-copy">
             <p class="eyebrow">Free controlled pilot</p>
             <h2>Request pilot access</h2>
             <p>
@@ -559,26 +561,137 @@
               <li>No investment advice or guaranteed returns.</li>
             </ul>
           </div>
-          <div class="request-actions">
-            <a
-              class="button button-primary"
-              href="mailto:softwaretamrsv@gmail.com?subject=DaoRoute%20Pilot%20Access%20Request&body=Hi%20DaoRoute%20team%2C%0A%0AI%20would%20like%20to%20request%20pilot%20access%20to%20DaoRoute.%0A%0AName%3A%0ACompany%20or%20project%3A%0AUse%20case%3A%0AMCP%20client%20or%20agent%20framework%3A%0AExpected%20testing%20timeline%3A%0A%0AI%20understand%20DaoRoute%20is%20non-custodial%2C%20does%20not%20guarantee%20returns%2C%20and%20does%20not%20provide%20investment%20advice.%0A"
-            >
-              Request free pilot access
-            </a>
-            <p>
-              Send your use case, agent stack, and testing timeline. We review
-              pilot requests manually and reply with next steps when there is a
-              fit. You can also read the
+          <form
+            id="pilot-form"
+            class="pilot-form"
+            aria-describedby="pilot-form-status"
+          >
+            <div class="form-grid">
+              <label>
+                <span>Name</span>
+                <input name="name" type="text" autocomplete="name" required />
+              </label>
+              <label>
+                <span>Work email</span>
+                <input
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                />
+              </label>
+            </div>
+
+            <label>
+              <span>Project or company</span>
+              <input name="project" type="text" autocomplete="organization" />
+            </label>
+
+            <div class="form-grid">
+              <label>
+                <span>Role</span>
+                <input
+                  name="role"
+                  type="text"
+                  placeholder="Founder, engineer, researcher"
+                />
+              </label>
+              <label>
+                <span>Agent type</span>
+                <select name="agent_type" required>
+                  <option value="">Select one</option>
+                  <option>AI agent</option>
+                  <option>DeFi bot</option>
+                  <option>DAO tooling</option>
+                  <option>Wallet or automation app</option>
+                  <option>Research</option>
+                  <option>Other</option>
+                </select>
+              </label>
+            </div>
+
+            <label>
+              <span>Intended use case</span>
+              <textarea
+                name="use_case"
+                rows="4"
+                minlength="20"
+                placeholder="Tell us what you want your agent or bot to evaluate with DaoRoute."
+                required
+              ></textarea>
+            </label>
+
+            <div class="form-grid">
+              <label>
+                <span>Expected monthly volume</span>
+                <select name="monthly_volume">
+                  <option value="">Prefer not to say</option>
+                  <option>&lt; $100k</option>
+                  <option>$100k - $1M</option>
+                  <option>$1M - $10M</option>
+                  <option>&gt; $10M</option>
+                </select>
+              </label>
+              <label>
+                <span>Chains of interest</span>
+                <input
+                  name="chains"
+                  type="text"
+                  placeholder="Ethereum, Base, Arbitrum"
+                />
+              </label>
+            </div>
+
+            <fieldset>
+              <legend>What do you need?</legend>
+              <label class="checkbox-row">
+                <input name="needs_attestation" type="checkbox" value="yes" />
+                <span>Signed attestations</span>
+              </label>
+              <label class="checkbox-row">
+                <input
+                  name="needs_execution_metadata"
+                  type="checkbox"
+                  value="yes"
+                />
+                <span>Execution metadata</span>
+              </label>
+            </fieldset>
+
+            <label class="form-honeypot" aria-hidden="true">
+              <span>Website</span>
+              <input
+                name="website"
+                type="text"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </label>
+
+            <label class="checkbox-row consent-row">
+              <input name="consent" type="checkbox" value="yes" required />
+              <span>
+                I understand DaoRoute is a controlled, non-custodial pilot with
+                no guaranteed returns and no investment advice.
+              </span>
+            </label>
+
+            <button class="button button-primary form-submit" type="submit">
+              Submit pilot request
+            </button>
+            <p id="pilot-form-status" class="form-status" role="status">
+              We review pilot requests manually and reply by email.
+            </p>
+            <p class="form-fallback">
+              Prefer email?
               <a
                 class="inline-link"
-                href="https://github.com/DAltieri86/DAORoute-mcp/blob/main/docs/PILOT_ONBOARDING.md"
+                href="mailto:softwaretamrsv@gmail.com?subject=DaoRoute%20Pilot%20Access%20Request"
               >
-                pilot onboarding guide
-              </a>
-              before requesting access.
+                Contact the pilot team
+              </a>.
             </p>
-          </div>
+          </form>
         </div>
       </section>
     </main>

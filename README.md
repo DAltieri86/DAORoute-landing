@@ -6,6 +6,12 @@ agents and DeFi automation builders.
 Live site:
 
 ```text
+https://www.daoroute.com/
+```
+
+GitHub Pages fallback:
+
+```text
 https://daltieri86.github.io/DAORoute-landing/
 ```
 
@@ -64,6 +70,9 @@ styles.css          Responsive styling
 sample-output.json  Redacted example MCP response
 og-image.svg        Social preview image
 404.html            GitHub Pages fallback
+pilot-form.js       Custom pilot request form integration
+CNAME               GitHub Pages custom domain
+docs/               Public setup notes for the pilot form
 .nojekyll           Static GitHub Pages marker
 ```
 
@@ -108,12 +117,37 @@ Folder: / (root)
 No custom GitHub Actions workflow is required. Avoid adding a duplicate Pages
 workflow unless the deployment model changes.
 
+Custom domain:
+
+```text
+www.daoroute.com
+```
+
+DNS target for the `www` CNAME:
+
+```text
+daltieri86.github.io
+```
+
+The apex domain `daoroute.com` should point to GitHub Pages A records and
+redirect to `www.daoroute.com` through GitHub Pages once DNS and HTTPS finish
+propagating.
+
 ## Pilot Access
 
-Pilot requests currently go to:
+Pilot requests are handled by the custom form in `index.html`.
+
+The form posts to Google Apps Script after `pilot-form.js` is configured with a
+Web App `/exec` URL. Until then, it opens a prefilled email fallback to:
 
 ```text
 softwaretamrsv@gmail.com
+```
+
+Form setup instructions:
+
+```text
+docs/PILOT_FORM_SETUP.md
 ```
 
 Requests are reviewed manually. Approved users receive the MCP endpoint, pilot

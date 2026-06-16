@@ -6,7 +6,8 @@
    * Leave empty while DNS and Apps Script are being configured; the form will
    * fall back to a prefilled email instead of dropping the request.
    */
-  const PILOT_FORM_ENDPOINT = "";
+  const PILOT_FORM_ENDPOINT =
+    "https://script.google.com/macros/s/AKfycbwflBXGcbBt2Lpbe0ccB_3fgH4wvZ7S0MJjwMixO757840m0RwQYo0J_h9XIFBEeFjgkw/exec";
   const PILOT_EMAIL = "softwaretamrsv@gmail.com";
 
   const form = document.querySelector("#pilot-form");

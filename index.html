@@ -267,6 +267,10 @@
             <span>80+</span>
             <p>pools screened</p>
           </div>
+          <div>
+            <span>5.7k+</span>
+            <p>yield validation windows</p>
+          </div>
         </div>
 
         <div class="data-grid">
@@ -284,6 +288,15 @@
               The engine packages data age, screened pool count, APR history,
               volatility, TVL context, protocol status, risk score,
               diversification, fee-adjusted APY, and selection rationale.
+            </p>
+          </article>
+          <article class="data-panel">
+            <h3>Validation context</h3>
+            <p>
+              Pilot responses can include baseline comparisons, readiness
+              status, blockers, warnings, and paper-validation signals so teams
+              can understand what is research-ready and what is public-claim
+              ready.
             </p>
           </article>
           <article class="data-panel">
@@ -485,12 +498,28 @@
       }
     }
   ],
-  "evidence_snapshot": {
+  "evidence_summary": {
     "product_type": "aggregated_decision_evidence",
     "candidate_pools_screened": 82,
     "apy_history_rows_indexed": 43817,
     "raw_database_export_available": false,
-    "evidence_grade": "usable_for_controlled_pilots"
+    "evidence_grade": "usable_for_controlled_pilots",
+    "validation_status": "controlled_pilot_only"
+  },
+  "validation_evidence": {
+    "public_marketing_claims_allowed": false,
+    "controlled_pilot_claims_allowed": true,
+    "yield_backtest": {
+      "evaluated_windows": 5725,
+      "best_naive_baseline": "naive_trailing_7d",
+      "mae_improvement_vs_best_naive": 0.0201
+    },
+    "yield_candidate": {
+      "action": "enable_candidate_shadow_mode",
+      "candidate_model": "median_current_7_30",
+      "fold_pass_rate": 0.8
+    },
+    "claim_boundary": "Controlled-pilot evidence only."
   },
   "execution": {
     "non_custodial": true,

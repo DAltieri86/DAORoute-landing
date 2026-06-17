@@ -31,6 +31,7 @@ DaoRoute helps AI agents and DeFi bots evaluate stablecoin allocation routes
 through:
 
 - multi-source data evidence;
+- validation evidence with baseline comparisons and pilot-readiness boundaries;
 - risk-adjusted pool and protocol context;
 - live security gates;
 - non-custodial execution metadata;
@@ -82,6 +83,7 @@ Keep the public copy disciplined:
 
 - say **controlled pilot**, not mass public launch;
 - say **decision evidence**, not guaranteed alpha;
+- say **validation evidence**, not public performance claim;
 - say **non-custodial**, not automated fund management;
 - say **aggregate evidence**, not raw database access;
 - say **execution metadata**, not transaction execution;

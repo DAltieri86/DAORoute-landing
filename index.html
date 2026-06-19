@@ -136,6 +136,7 @@
 
         <div class="stack-grid" aria-label="Supported pilot integration guides">
           <article class="stack-card">
+            <span class="stack-badge">MCP config</span>
             <h3>Claude Desktop / Cursor</h3>
             <p>
               Add DaoRoute to an MCP client config with Streamable HTTP and
@@ -143,6 +144,7 @@
             </p>
           </article>
           <article class="stack-card">
+            <span class="stack-badge">Agent graph</span>
             <h3>LangChain / LangGraph</h3>
             <p>
               Register DaoRoute tools through MCP adapters and use market
@@ -150,13 +152,15 @@
             </p>
           </article>
           <article class="stack-card">
+            <span class="stack-badge">Agents SDK</span>
             <h3>OpenAI Agents SDK</h3>
             <p>
-              Attach DaoRoute as an `MCPServerStreamableHttp` server for
-              agent-side tool calls.
+              Attach DaoRoute as a Streamable HTTP MCP server for agent-side
+              tool calls in the Agents SDK.
             </p>
           </article>
           <article class="stack-card">
+            <span class="stack-badge">Plugin/action</span>
             <h3>ElizaOS</h3>
             <p>
               Wrap DaoRoute calls inside a plugin/action while keeping wallet
@@ -164,6 +168,7 @@
             </p>
           </article>
           <article class="stack-card">
+            <span class="stack-badge">Any MCP client</span>
             <h3>Generic remote MCP</h3>
             <p>
               Use the same endpoint and API-key pattern from any compatible MCP
@@ -173,10 +178,10 @@
         </div>
 
         <div class="integration-flow">
-          <span>Add MCP endpoint</span>
-          <span>Send pilot API key</span>
-          <span>Call <code>get_market_snapshot</code></span>
-          <span>Review evidence and safety state</span>
+          <span><strong>01</strong>Add MCP endpoint</span>
+          <span><strong>02</strong>Send pilot API key</span>
+          <span><strong>03</strong>Call <code>get_market_snapshot</code></span>
+          <span><strong>04</strong>Review evidence and safety state</span>
         </div>
 
         <a

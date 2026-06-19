@@ -55,7 +55,7 @@
     "candidate_pools_screened": 82,
     "apy_history_rows_indexed": 43817,
     "governance_proposals_indexed": 1163,
-    "governance_votes_indexed": 3200000,
+    "governance_votes_indexed": 3100000,
     "protocols_covered": ["aave", "compound", "curve"],
     "agent_value": [
       "one response combines APY context, safety gates, risk-adjusted ranking, execution metadata, and cryptographic attestation",

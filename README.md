@@ -68,6 +68,7 @@ og-image.svg        Social preview image
 pilot-form.js       Custom pilot request form integration
 CNAME               GitHub Pages custom domain
 docs/               Public setup notes for the pilot form
+content/            Draft launch, outreach, and directory content
 .nojekyll           Static GitHub Pages marker
 ```
 
@@ -82,6 +83,23 @@ Keep the public copy disciplined:
 - say **aggregate evidence**, not raw database access;
 - say **execution metadata**, not transaction execution;
 - avoid performance promises, APY guarantees, or investment advice.
+- mark examples as **illustrative / redacted sample - live values vary**.
+
+## Content Kit
+
+Drafts for manual publication live in `content/`.
+
+Included:
+
+- build-in-public posts;
+- launch thread;
+- Show HN draft;
+- outreach templates;
+- directory descriptions;
+- paid ads assessment.
+
+These are drafts only. Review current product status, endpoint readiness, and
+pilot boundaries before publishing.
 
 ## Local Preview
 

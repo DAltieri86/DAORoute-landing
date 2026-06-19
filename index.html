@@ -3,16 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>DaoRoute | Non-custodial MCP decision layer for DeFi agents</title>
+    <title>DaoRoute | MCP server for DeFi agents and stablecoin allocation</title>
     <meta
       name="description"
-      content="DaoRoute is a non-custodial MCP server for AI agents and DeFi bots. Controlled pilot for stablecoin allocation decisions backed by a multi-source data index, risk scoring, security gates, signed attestations, and execution metadata."
+      content="DaoRoute is a non-custodial MCP server for DeFi agents evaluating stablecoin allocation routes with security gates, risk scoring, signed allocation memos, evidence snapshots, and execution metadata."
+    />
+    <meta
+      name="keywords"
+      content="MCP server for DeFi agents, non-custodial stablecoin allocation, DeFi agent security gate, signed allocation memo, AI agent DeFi, stablecoin routing"
     />
     <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="DaoRoute" />
+    <meta property="og:site_name" content="DaoRoute" />
+    <meta
+      property="og:title"
+      content="DaoRoute | MCP server for DeFi agents"
+    />
     <meta
       property="og:description"
-      content="A non-custodial MCP decision layer with multi-source data evidence for AI agents allocating stablecoin capital in DeFi."
+      content="Non-custodial stablecoin allocation evidence for AI agents: security gates, risk context, signed allocation memos, and execution metadata."
     />
     <meta property="og:type" content="website" />
     <meta
@@ -28,12 +36,35 @@
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
+      name="twitter:title"
+      content="DaoRoute | MCP server for DeFi agents"
+    />
+    <meta
+      name="twitter:description"
+      content="Free controlled pilot for a non-custodial MCP decision layer with DeFi agent security gates and signed allocation memos."
+    />
+    <meta
       name="twitter:image"
       content="https://www.daoroute.com/og-image.svg"
     />
     <meta name="theme-color" content="#0f2742" />
     <link rel="canonical" href="https://www.daoroute.com/" />
-    <link rel="stylesheet" href="styles.css?v=20260619-3" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "DaoRoute",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Hosted MCP server",
+        "url": "https://www.daoroute.com/",
+        "description": "Non-custodial MCP server for DeFi agents evaluating stablecoin allocation routes with security gates, risk scoring, signed allocation memos, evidence snapshots, and execution metadata.",
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "AI agent builders and DeFi automation teams"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="styles.css?v=20260619-4" />
     <script src="pilot-form.js" defer></script>
   </head>
   <body>
@@ -69,8 +100,11 @@
             <a class="button button-primary" href="#request-access">
               Request free pilot access
             </a>
-            <a class="button button-secondary" href="#sample-output">
-              See sample output
+            <a
+              class="button button-secondary"
+              href="https://github.com/DAltieri86/DAORoute-mcp/tree/main/integrations"
+            >
+              Integrate
             </a>
           </div>
         </div>
@@ -102,6 +136,10 @@
             One response packages allocation rationale, risk boundaries,
             security status, data coverage, and unsigned execution metadata for
             agent workflows.
+          </p>
+          <p class="sample-note">
+            Illustrative / redacted sample - live values vary. Runtime security
+            status may be `clear`, `watch`, or `compromised`.
           </p>
         </aside>
       </section>
@@ -533,6 +571,11 @@
             metadata, and verification into one agent-readable response. A
             richer redacted sample is also available as
             <a class="inline-link" href="sample-output.json">sample-output.json</a>.
+          </p>
+          <p class="sample-note sample-note-wide">
+            Illustrative / redacted sample - live values vary. A sample may show
+            `clear/PROCEED`, while the live security gate can return
+            `watch/REDUCE_EXPOSURE` or `compromised/EXIT_IMMEDIATELY`.
           </p>
         </div>
         <pre class="code-block" aria-label="Sample DaoRoute MCP output"><code>{

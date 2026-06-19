@@ -45,6 +45,7 @@
       <nav class="nav" aria-label="Primary navigation">
         <a href="#what-it-is">What it is</a>
         <a href="#data-layer">Data layer</a>
+        <a href="#integrations">Integrations</a>
         <a href="#api-usage">API usage</a>
         <a href="#pilot">Pilot</a>
         <a href="#sample-output">Sample output</a>
@@ -120,6 +121,70 @@
             <span>Security overrides take precedence over yield signals.</span>
           </div>
         </div>
+      </section>
+
+      <section id="integrations" class="section integrations-section">
+        <div class="section-heading">
+          <p class="eyebrow">Agent-stack ready</p>
+          <h2>Connect DaoRoute where your agents already run.</h2>
+          <p>
+            DaoRoute is exposed as a remote Streamable HTTP MCP server. Approved
+            pilot users receive an endpoint, a pilot API key, and copy-paste
+            integration guides for common agent stacks.
+          </p>
+        </div>
+
+        <div class="stack-grid" aria-label="Supported pilot integration guides">
+          <article class="stack-card">
+            <h3>Claude Desktop / Cursor</h3>
+            <p>
+              Add DaoRoute to an MCP client config with Streamable HTTP and
+              `x-api-key` authentication.
+            </p>
+          </article>
+          <article class="stack-card">
+            <h3>LangChain / LangGraph</h3>
+            <p>
+              Register DaoRoute tools through MCP adapters and use market
+              snapshots as the first graph step.
+            </p>
+          </article>
+          <article class="stack-card">
+            <h3>OpenAI Agents SDK</h3>
+            <p>
+              Attach DaoRoute as an `MCPServerStreamableHttp` server for
+              agent-side tool calls.
+            </p>
+          </article>
+          <article class="stack-card">
+            <h3>ElizaOS</h3>
+            <p>
+              Wrap DaoRoute calls inside a plugin/action while keeping wallet
+              approval and execution separate.
+            </p>
+          </article>
+          <article class="stack-card">
+            <h3>Generic remote MCP</h3>
+            <p>
+              Use the same endpoint and API-key pattern from any compatible MCP
+              runtime.
+            </p>
+          </article>
+        </div>
+
+        <div class="integration-flow">
+          <span>Add MCP endpoint</span>
+          <span>Send pilot API key</span>
+          <span>Call <code>get_market_snapshot</code></span>
+          <span>Review evidence and safety state</span>
+        </div>
+
+        <a
+          class="button button-secondary docs-button"
+          href="https://github.com/DAltieri86/DAORoute-mcp/tree/main/integrations"
+        >
+          View integration docs
+        </a>
       </section>
 
       <section id="what-it-is" class="section split">

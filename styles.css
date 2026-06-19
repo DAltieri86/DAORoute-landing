@@ -326,6 +326,64 @@ h3 {
   font-size: 14px;
 }
 
+.integrations-section {
+  max-width: 1120px;
+}
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.stack-card {
+  min-width: 0;
+  min-height: 214px;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.stack-card h3 {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.stack-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.integration-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  margin-top: 18px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.integration-flow span {
+  min-width: 0;
+  padding: 16px 18px;
+  color: var(--primary);
+  background: var(--accent-soft);
+  font-size: 14px;
+  font-weight: 760;
+}
+
+.integration-flow code {
+  overflow-wrap: anywhere;
+}
+
+.docs-button {
+  margin-top: 18px;
+}
+
 .cards {
   display: grid;
   gap: 16px;
@@ -826,9 +884,10 @@ h3 {
 
   .cards.three,
   .cards.four,
-  .feature-grid,
-  .data-grid,
-  .integration-grid {
+    .feature-grid,
+    .data-grid,
+    .stack-grid,
+    .integration-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -865,11 +924,13 @@ h3 {
   .cards.two,
   .cards.four,
   .feature-grid,
-  .data-grid,
-  .data-metrics,
-  .form-grid,
-  .integration-grid,
-  .metrics-grid {
+    .data-grid,
+    .data-metrics,
+    .stack-grid,
+    .integration-flow,
+    .form-grid,
+    .integration-grid,
+    .metrics-grid {
     grid-template-columns: 1fr;
   }
 

@@ -9,12 +9,6 @@ Live site:
 https://www.daoroute.com/
 ```
 
-GitHub Pages fallback:
-
-```text
-https://daltieri86.github.io/DAORoute-landing/
-```
-
 Public pilot documentation:
 
 ```text
